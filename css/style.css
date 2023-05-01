@@ -1,0 +1,554 @@
+/* ===== FONTS ===== */
+
+@font-face {
+    font-family:"Aquir";
+    src: url(/Font/aquire-43735/AquireBold-8Ma60.otf);
+}
+@font-face {
+    font-family:"Bahamas";
+    src: url(/Font/bahamas-two-63384/BahamasTwoPersonalUseBold-ywEVq.ttf);
+}
+@font-face {
+    font-family:"Halimun";
+    src: url(/Font/halimun-30001/Halimun-W7jn.ttf);
+}
+@font-face {
+    font-family:"Karima";
+    src: url(/Font/karima-83525/KarimaForPersonalUseOnly-ZVPJm.otf);
+}
+@font-face {
+    font-family:"Rabenk";
+    src: url(/Font/rabenk-87491/Rabenk-WyBOO.ttf);
+}
+@font-face {
+    font-family:"Zilap";
+    src: url(/Font/zilap-romance-45086/ZilapRomancePersonalUse-4Byjx.ttf);
+}
+
+/* ===== ROOTS ===== */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10rem;
+    height: 40px;
+    border: 1px solid white;
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #585656;
+  }
+
+  ::-webkit-scrollbar-track{
+    padding-block: 5px;
+    margin-block: 20px;
+  }
+
+
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+  }
+
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+  }
+
+/* ===== FIRST PAGE ===== */
+
+body{
+    box-shadow: inset 0 0 100px 0 #585656;
+    overflow: overlay; /* to make scrollbar over layout */
+}
+
+/*  * NAVBAR * */
+
+.nav{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav .logo h2 , .nav .logo h2 a{
+    font-family: "Zilap";
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.nav .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.nav .menu .burger{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+.nav .menu .burger i , .nav .menu .burger svg {
+    position: absolute;
+    cursor: pointer;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    
+}
+.nav .menu .listul{
+    width: 0px;
+}
+.nav .menu .listul,.nav .menu .listul ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition:  0.5s;
+}
+.nav .menu .listul ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+
+}
+
+.nav .menu .listul.show ul li a {
+    color: black;
+    transition: color 0.5s 0.2s;
+}
+.nav .menu .listul ul li a {
+    text-decoration: none;
+    color: transparent;
+    transition: color 0.5s;
+}
+
+
+/*   * MAIN *   */
+
+.main{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main .man{
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    overflow: hidden;
+}
+
+.main .woman{
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.main .dis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    text-align: center;
+}
+.main .dis h3{
+    font-family:"Halimun" ;
+    margin-bottom: 10px !important;
+}
+.main .dis p{
+    line-height: 1.5;
+    word-spacing: 2px;
+    font-size: larger;
+}
+
+.main .image{
+    border: 2px solid black;
+    width: 260px;
+    height: 300px;
+}
+
+.main .image img{
+    width: 100%;
+    height: 100%;
+}
+
+/*   * MIDIA QUIEY *   */
+
+@media (max-width: 767.98px){
+
+    body{
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .main{
+        height: 100%;
+        overflow: visible;
+        justify-content: flex-start;
+    }
+    .main .man , .main .woman{
+        flex-direction: column;
+        overflow: visible;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .main .dis{
+        width: 90%;
+        height: fit-content;
+        font-size: small;
+    }
+
+    .main .woman{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+        body{
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .main{
+        height: 100%;
+        overflow: visible;
+        justify-content: flex-start;
+    }
+    .main .man , .main .woman{
+        flex-direction: column;
+        overflow: visible;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .main .dis{
+        width: 90%;
+        height: fit-content;
+        font-size: larger;
+    }
+
+    .main .woman{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+           body{
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .main{
+        height: 100%;
+        overflow: visible;
+        justify-content: flex-start;
+    }
+    .main .man , .main .woman{
+        flex-direction: column;
+        overflow: visible;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .main .dis{
+        width: 90%;
+        height: fit-content;
+        font-size: larger;
+    }
+
+    .main .woman{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 1199.98px) and (max-width: 1500px){
+
+    body{
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .main .dis p {
+        font-size: smaller;
+    }
+
+    .main{
+        height: 85vh;
+        overflow: visible;
+    }
+
+    .main .woman{
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .main .man {
+        height: fit-content;
+        overflow: visible;
+    }
+
+    .main .image{
+        border: 2px solid black;
+        width: 220px;
+        height: 260px;
+    }
+    
+    .main .image img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+/*  ====== WOMAN PAGE ===== */
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    /* box-shadow: inset 0 0 5px 0 #b1adad; */
+    padding: 10px;
+}
+
+.categories ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.categories ul li{
+    cursor: pointer;
+}
+
+.categories ul li.action{
+    position: relative;
+}
+
+.categories ul li.action::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    animation: full 0.5s forwards;
+}
+
+@keyframes full {
+    100%{
+        width: 100%;
+    }
+}
+
+                    /* cart-list */
+
+.main-cart{
+    position: fixed;
+    top: 0;
+    right: -400px;
+    height: 100vh;
+    width: 400px;
+    z-index: 99;
+    transition: right 0.5s;
+    background-color: #b1abab52;
+    box-shadow: inset 0 0 50px 50px #b1abab52;
+}
+
+.main-cart .pop-up {
+    position: absolute;
+    left: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    border-radius: 20px;
+}
+
+.main-cart .cart-list .list{
+    height: 90vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.main-cart .cart-list .list::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* action Of cart button */
+.main-cart.action {
+    right: 0;
+    transition: right 0.5s;
+}
+
+ .list .cart-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-bottom: 2px solid black;
+ }
+ .list .cart-product .cart-product-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 170px;
+    width: 60%;
+    text-align: center;
+ }
+ .list .cart-product .cart-product-info .go a{
+    text-decoration: none;
+    color: white;
+    background-color: #585656;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+ .list .cart-product .cart-product-info .go a:last-child{
+    background-color: red;
+ }
+ .list-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+border: 2px solid black;
+ }
+
+ .cart-list .buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 15px;
+ }
+
+/* ===== Woman Page ===== */
+
+.woman-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.woman-main .all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 580px;
+    border: 3px solid rgba(99, 94, 94, 0.5);
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.woman-main .all .image{
+    position: relative;
+    width: 565px;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.woman-main .all .image:hover img:nth-child(1) {
+    opacity: 1;
+}
+
+.woman-main .all .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.woman-main .all .image:hover img:nth-child(2){
+    opacity: 0;
+}
+
+.woman-main .all .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.woman-main .all .info .price {
+    position: relative;
+    font-size: 25px;
+
+}
+
+
+
+.woman-main .all .info .price button.add{
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.woman-main .all .info .price button.not {
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    border-color: transparent;
+    position: absolute;
+    right: -250px;
+    transform:skew(-45deg);
+    cursor: not-allowed;
+}
+
+
+/*  ===== Woman MidaQuiry ===== */
