@@ -26,7 +26,7 @@ menu.addEventListener("click", () => {
 
 // MAKE LISTUL FROM JSON ZARA
 
-fetch("../json/nav-list.json")
+fetch("/json/nav-list.json")
   .then((result) => {
     const data = result.json();
     return data;
