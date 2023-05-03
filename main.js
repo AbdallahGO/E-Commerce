@@ -23,37 +23,3 @@ menu.addEventListener("click", () => {
     ul.style.transition = "1s";
   }
 });
-
-// MAKE LISTUL FROM JSON ZARA
-
-fetch("/json/nav-list.json")
-  .then((result) => {
-    const data = result.json();
-    return data;
-  })
-  .then((s1) => {
-    const names = s1.categories;
-
-    const ulEl = document.createElement("ul");
-
-    for (let i = 0; i < names.length; i++) {
-      const liEl = document.createElement("li");
-
-      const aEl = document.createElement("a");
-
-      liEl.appendChild(aEl);
-
-      aEl.textContent = names[i].name;
-      aEl.setAttribute("data-nav", names[i].name);
-
-      if (location.pathname === "/index.html") {
-        aEl.setAttribute("href", `html/${names[i].name}.html`);
-      } else {
-        aEl.setAttribute("href", `${names[i].name}.html`);
-      }
-
-      ulEl.appendChild(liEl);
-    }
-
-    ul.appendChild(ulEl);
-  });
