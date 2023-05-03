@@ -2,27 +2,27 @@
 
 @font-face {
     font-family:"Aquir";
-    src: url(Font/aquire-43735/AquireBold-8Ma60.otf);
+    src: url(../Font/aquire-43735/AquireBold-8Ma60.otf);
 }
 @font-face {
     font-family:"Bahamas";
-    src: url(Font/bahamas-two-63384/BahamasTwoPersonalUseBold-ywEVq.ttf);
+    src: url(../Font/bahamas-two-63384/BahamasTwoPersonalUseBold-ywEVq.ttf);
 }
 @font-face {
     font-family:"Halimun";
-    src: url(Font/halimun-30001/Halimun-W7jn.ttf);
+    src: url(../Font/halimun-30001/Halimun-W7jn.ttf);
 }
 @font-face {
     font-family:"Karima";
-    src: url(Font/karima-83525/KarimaForPersonalUseOnly-ZVPJm.otf);
+    src: url(../Font/karima-83525/KarimaForPersonalUseOnly-ZVPJm.otf);
 }
 @font-face {
     font-family:"Rabenk";
-    src: url(Font/rabenk-87491/Rabenk-WyBOO.ttf);
+    src: url(../Font/rabenk-87491/Rabenk-WyBOO.ttf);
 }
 @font-face {
     font-family:"Zilap";
-    src: url(Font/zilap-romance-45086/ZilapRomancePersonalUse-4Byjx.ttf);
+    src: url(../Font/zilap-romance-45086/ZilapRomancePersonalUse-4Byjx.ttf);
 }
 
 /* ===== ROOTS ===== */
