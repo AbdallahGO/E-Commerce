@@ -57,11 +57,3 @@ fetch("/json/nav-list.json")
 
     ul.appendChild(ulEl);
   });
-
-// Action Of Cart
-let cartButton = document.querySelector(".main-cart .pop-up");
-let mainCart = document.querySelector(".main-cart");
-
-cartButton.addEventListener("click", () => {
-  mainCart.classList.toggle("action");
-});
