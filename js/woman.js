@@ -16,6 +16,9 @@ catlis.forEach((e) => {
   });
 });
 
+// Make MainElement what append product in it
+const mainElement = document.querySelector(".woman-main");
+
 fetch("../json/WOMAN/woman.json")
   .then((data) => {
     const dat = data.json();
@@ -26,10 +29,6 @@ fetch("../json/WOMAN/woman.json")
     const objectKeys = Object.keys(res.productGroups);
 
     const objectValues = Object.values(res.productGroups);
-
-    // Make MainElement what append product in it
-    const mainElement = document.createElement("div");
-    mainElement.classList.add("woman-main");
 
     // make ProductElement
     for (let i = 0; i < objectKeys.length; i++) {
@@ -116,7 +115,7 @@ fetch("../json/WOMAN/woman.json")
         mainElement.appendChild(productElement);
       }
 
-      document.body.appendChild(mainElement);
+      // document.body.appendChild(mainElement);
     }
 
     // categories function
