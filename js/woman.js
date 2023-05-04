@@ -16,7 +16,7 @@ catlis.forEach((e) => {
   });
 });
 
-fetch("/json/WOMAN/woman.json")
+fetch("../json/WOMAN/woman.json")
   .then((data) => {
     const dat = data.json();
 
@@ -149,7 +149,7 @@ updateCart();
 function addToCart(id) {
   cartList.innerHTML = "";
 
-  fetch("/json/WOMAN/woman.json")
+  fetch("../json/WOMAN/woman.json")
     .then((data) => {
       const dat = data.json();
 
