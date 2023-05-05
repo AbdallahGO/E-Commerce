@@ -1,7 +1,6 @@
-window.onload = function () {
-  let links = document.querySelectorAll(".listul ul li a");
-  links[0].style.borderBottom = "1px solid black";
-};
+let links = document.querySelectorAll(".listul ul li a");
+
+links[0].style.borderBottom = "1px solid black";
 
 // FUNCTION OF CLICK ON OF CATIGORIES
 const catlis = document.querySelectorAll(".categories ul li");
@@ -54,10 +53,34 @@ fetch("../json/WOMAN/woman.json")
           // Make image Element
           const ProductImage = document.createElement("img");
           ProductImage.classList.add(`img-${z + 1}`);
-          ProductImage.setAttribute(
-            "src",
-            `https://static.zara.net/photos//${productData.xmedia[z].path}/w/500/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
-          );
+
+          // Change size of image
+
+          if (document.body.scrollWidth <= 576) {
+            console.log("small");
+          } else if (
+            document.body.scrollWidth > 576 &&
+            document.body.scrollWidth <= 767.98
+          ) {
+            ProductImage.setAttribute(
+              "src",
+              `https://static.zara.net/photos//${productData.xmedia[z].path}/w/150/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
+            );
+          } else if (
+            document.body.scrollWidth > 767.98 &&
+            document.body.scrollWidth <= 991.98
+          ) {
+            ProductImage.setAttribute(
+              "src",
+              `https://static.zara.net/photos//${productData.xmedia[z].path}/w/300/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
+            );
+          } else {
+            ProductImage.setAttribute(
+              "src",
+              `https://static.zara.net/photos//${productData.xmedia[z].path}/w/500/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
+            );
+          }
+
           hugImage.appendChild(ProductImage);
         }
 
@@ -126,7 +149,6 @@ fetch("../json/WOMAN/woman.json")
       e.addEventListener("click", () => {
         mainElement.textContent = "";
 
-        console.log(e.dataset.out);
         for (let i = 0; i < productElementTwo.length; i++) {
           mainElement.appendChild(productElementTwo[i]);
         }
@@ -275,26 +297,8 @@ function changeNumberOfUnits(action, idd) {
 }
 
 window.onload = function () {
-  if (document.body.scrollWidth <= 576) {
-    console.log("small");
-  } else if (
-    document.body.scrollWidth > 576 &&
-    document.body.scrollWidth <= 767.98
-  ) {
-    console.log("mid");
-  } else if (
-    document.body.scrollWidth > 767.98 &&
-    document.body.scrollWidth <= 991.98
-  ) {
-    console.log("larg");
-  } else if (
-    document.body.scrollWidth > 991.98 &&
-    document.body.scrollWidth <= 1199.98
-  ) {
-    console.log("Xlarg");
-  } else {
-    console.log("more");
-  }
+  const proImg = document.querySelectorAll(".woman-main .all .image img");
+  proImg.forEach((e) => {});
 };
 
 // Action Of Cart
@@ -303,4 +307,5 @@ let mainCart = document.querySelector(".main-cart");
 
 cartButton.addEventListener("click", () => {
   mainCart.classList.toggle("action");
+  cartButton.classList.toggle("back");
 });
