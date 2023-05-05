@@ -1,3 +1,5 @@
+let pop = document.querySelector(".pop");
+
 let links = document.querySelectorAll(".listul ul li a");
 
 links[0].style.borderBottom = "1px solid black";
@@ -309,3 +311,12 @@ cartButton.addEventListener("click", () => {
   mainCart.classList.toggle("action");
   cartButton.classList.toggle("back");
 });
+
+window.onscroll = function () {
+  const scroll = document.body.scrollHeight - window.scrollY;
+  if (scroll < document.body.scrollHeight) {
+    pop.classList.add("show");
+  } else {
+    pop.classList.remove("show");
+  }
+};
