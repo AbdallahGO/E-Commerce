@@ -58,30 +58,10 @@ fetch("../json/WOMAN/woman.json")
 
           // Change size of image
 
-          if (document.body.scrollWidth <= 576) {
-            console.log("small");
-          } else if (
-            document.body.scrollWidth > 576 &&
-            document.body.scrollWidth <= 767.98
-          ) {
-            ProductImage.setAttribute(
-              "src",
-              `https://static.zara.net/photos//${productData.xmedia[z].path}/w/150/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
-            );
-          } else if (
-            document.body.scrollWidth > 767.98 &&
-            document.body.scrollWidth <= 991.98
-          ) {
-            ProductImage.setAttribute(
-              "src",
-              `https://static.zara.net/photos//${productData.xmedia[z].path}/w/300/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
-            );
-          } else {
-            ProductImage.setAttribute(
-              "src",
-              `https://static.zara.net/photos//${productData.xmedia[z].path}/w/500/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
-            );
-          }
+          ProductImage.setAttribute(
+            "src",
+            `https://static.zara.net/photos//${productData.xmedia[z].path}/w/500/${productData.xmedia[z].name}.jpg?ts=${productData.xmedia[z].timestamp}`
+          );
 
           hugImage.appendChild(ProductImage);
         }
